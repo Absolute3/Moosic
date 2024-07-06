@@ -1,0 +1,50 @@
+.homepage {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .homepage__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #282828;
+  }
+  
+  .homepage__header img {
+    height: 30px;
+  }
+  
+  .homepage__header input {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+  }
+  
+  .homepage__body {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+  }
+  
+  .homepage__body-left {
+    flex: 0 0 200px;
+    background-color: #333333;
+    color: white;
+    padding: 10px;
+  }
+  
+  .homepage__body-right {
+    flex-grow: 1;
+    background-color: #121212;
+    color: white;
+    padding: 10px;
+    overflow-y: scroll;
+  }
+  
+  .homepage__recently-played-songs {
+    display: flex;
+    flex-wrap: wrap;
+  }
