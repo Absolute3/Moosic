@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
+from pydantic import BaseModel
 
 app = FastAPI(strict_type = True)
 
@@ -14,10 +15,17 @@ app.add_middleware(
     allow_headers = ["*"]
 )
 
+class InputQuery(BaseModel):
+    keyword: str
 
 @app.get("/")
 def read_root():
     return {"Hello": "World"}
+
+@app.post('/search')
+def search(input:InputQuery):
+    # write async code to call search api's
+    return
 
 
 if __name__ == "__main__":
